@@ -17,6 +17,19 @@ $last_time_records = $DB->get_record_sql($last_sql, array($USER->id, $issetgoal-
 <table class="table table-bordered">
 	<tbody>
 		<tr>
+			<th style="text-align:center" width="50%">良問の基準</th>
+			<th style="text-align:center" width="50%">演習目標</th>
+		</tr>
+		<tr>
+			<td><?php echo get_string('good_quiz_help', 'issetgoal')?></td>
+			<td><?php echo nl2br($issetgoal->target);?></td>
+		</tr>
+	</tbody>
+</table>
+
+<table class="table table-bordered">
+	<tbody>
+		<tr>
             <th style="text-align:center" rowspan="2" colspan="2" width="15%">規準</th>
             <th style="text-align:center" colspan="4">基準</th>
         </tr>

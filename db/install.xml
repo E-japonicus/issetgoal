@@ -17,6 +17,7 @@
         <FIELD NAME="year"          TYPE="int"  LENGTH="4"    NOTNULL="true" SEQUENCE="false" DEFAULT="0"   COMMENT="year"/>
         <FIELD NAME="subject"       TYPE="char" LENGTH="1"    NOTNULL="true" SEQUENCE="false" DEFAULT="A"   COMMENT="subject"/>
         <FIELD NAME="times"         TYPE="int"  LENGTH="2"    NOTNULL="true" SEQUENCE="false" DEFAULT="0"   COMMENT="times"/>
+        <FIELD NAME="target"        TYPE="text"               NOTNULL="false" SEQUENCE="false"               COMMENT="演習の目標"/>
       </FIELDS>
       <KEYS>
         <KEY NAME="primary" TYPE="primary" FIELDS="id"/>

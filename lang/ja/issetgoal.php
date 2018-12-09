@@ -41,6 +41,17 @@ $string['issetgoal'] = 'issetgoal';
 $string['pluginadministration'] = 'issetgoal administration';
 $string['pluginname'] = 'issetgoal';
 
+// 良問の基準
+$string['good_quiz_help'] = '
+・解説に答えを導く計算過程が書かれており、不正解した学習者が見てわかりやすい解説になっているか？<br>
+・著作権を侵害していないか？（参考文献が記載されているか？）<br>
+・誤字脱字がないか？<br>
+・曖昧な表現やわかりにくい表現はないか？<br>
+・問題内容・答え・解説は正しいか？<br>
+・誤答選択肢には妥当な選択肢が設定されているか？<br>
+　（明らかに誤答とわかる選択肢はないか？）
+';
+
 $string['rubric[1]']        = '作問課題に関連する単元や内容を列挙する';
 $string['rubric[1]_help']   = '';
 $string['rubric[1]_suffix'] = '作問課題に関連する単元や内容を';

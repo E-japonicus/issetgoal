@@ -150,6 +150,21 @@ function xmldb_issetgoal_upgrade($oldversion) {
         upgrade_mod_savepoint(true, 2007040200, 'issetgoal');
     }
 
+    if ($oldversion < 2018120501) {
+
+        // Define field target to be added to issetgoal.
+        $table = new xmldb_table('issetgoal');
+        $field = new xmldb_field('target', XMLDB_TYPE_TEXT, null, null, null, null, null, 'times');
+
+        // Conditionally launch add field target.
+        if (!$dbman->field_exists($table, $field)) {
+            $dbman->add_field($table, $field);
+        }
+
+        // Isselfeval savepoint reached.
+        upgrade_mod_savepoint(true, 2018120501, 'issetgoal');
+    }
+
     /*
      * And that's all. Please, examine and understand the 3 example blocks above. Also
      * it's interesting to look how other modules are using this script. Remember that

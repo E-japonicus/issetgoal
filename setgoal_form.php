@@ -15,6 +15,20 @@ $last_time_records = $DB->get_record_sql($last_sql, array($USER->id, $issetgoal-
 
 <div>
 
+
+<table class="table table-bordered sticky">
+	<tbody>
+		<tr>
+			<th style="text-align:center" width="50%">良問の基準</th>
+			<th style="text-align:center" width="50%">演習目標</th>
+		</tr>
+		<tr>
+			<td><?php echo get_string('good_quiz_help', 'issetgoal')?></td>
+			<td><?php echo nl2br($issetgoal->target);?></td>
+		</tr>
+	</tbody>
+</table>
+
 <form method="post" action="" name="selfeval_rubrics">
     <table class="table table-bordered table-checked" style="height:200px;">
         <tbody>
