@@ -27,6 +27,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
+
 $plugin->component = 'mod_issetgoal';
 $plugin->version = 2018120503;
 $plugin->release = 'v0.7';
