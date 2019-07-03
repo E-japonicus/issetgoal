@@ -28,7 +28,7 @@ include './get_records_sql.php';
 
 <?php if (!empty($peereval_records)) : ?>
 <table class="table table-bordered">
-    <thead style="background: #f8f8f8;">
+    <thead class="thead">
         <tr>
 			<th style="text-align:center" width="30%">評価者</th>
 			<th style="text-align:center" width="70%">前回の他者評価のコメント</th>
@@ -49,7 +49,7 @@ include './get_records_sql.php';
 
 <form method="post" action="" name="selfeval_rubrics">
     <table class="table table-bordered table-checked" style="height:200px;">
-        <thead style="background: #f8f8f8;">
+        <thead class="thead">
             <tr>
                 <th style="text-align:center" rowspan="2"width="15%">規準</th>
                 <th style="text-align:center" colspan="4">基準</th>
