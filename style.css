@@ -10,6 +10,23 @@
 	margin: 1%;
 }
 
+.self-1{
+	background: #ffe5ff;
+}
+
+.self-2{
+	background: #e5ffe5;
+}
+
+.self-3{
+	background: #fff2e5;
+}
+
+.peer-eval{
+	background: #ffe5e5;
+}
+
+/* 登録ボタン */
 .submit-button {
 	font-size: 1.5em;
 	width: 100%;
@@ -23,19 +40,7 @@
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
 }
 
-.table-title{
-	text-align: center !important; 
-	vertical-align: middle !important;
-	font-size: 1.2rem;
-	font-weight: bold;
-}
-
-.table-val{
-	text-align: center !important; 
-	vertical-align: middle !important;
-	font-size: 2.5rem;
-}
-
+/* 表の追尾 */
 .sticky {
     position: -webkit-sticky; /* Safari用 */
     position:sticky; /* 要素をスクロールに応じて固定 */

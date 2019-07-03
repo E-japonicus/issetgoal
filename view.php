@@ -122,6 +122,8 @@ else:
     else:
         // それ以外の場合
         // formの表示
+        // require_once("{$CFG->dirroot}/mod/issetgoal/self_peer_eval.php");
+
         require_once("{$CFG->dirroot}/mod/issetgoal/setgoal_form.php");
 
     endif;
