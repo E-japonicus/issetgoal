@@ -28,8 +28,8 @@ include './get_records_sql.php';
 
 <?php if (!empty($peereval_records)) : ?>
 <table class="table table-bordered">
-    <thead>
-        <tr style="background: #f8f8f8;">
+    <thead style="background: #f8f8f8;">
+        <tr>
 			<th style="text-align:center" width="30%">評価者</th>
 			<th style="text-align:center" width="70%">前回の他者評価のコメント</th>
         </tr>
