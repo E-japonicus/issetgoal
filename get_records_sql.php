@@ -14,9 +14,11 @@ $peereval_records_sql = "SELECT * FROM {ispeereval_rubrics} WHERE peer_id = ?";
 $peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id));
 $peer_name = array('Aさん', 'Bさん', 'Cさん', 'Dさん', 'Eさん', 'Fさん');
 
-var_dump($DB->get_records_sql($peereval_time, array($issetgoal->year, $issetgoal->subject)));
 
-echo "</br></br></br>";
+$test = "SELECT * FROM {ispeereval}";
+var_dump($DB->get_records_sql($test));
 
-var_dump($peereval_records); 
+// echo "</br></br></br>";
+
+// var_dump($peereval_records); 
 ?>
