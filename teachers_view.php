@@ -1,4 +1,7 @@
 <link rel="stylesheet" type="text/css" href="./style.css">
+<script type="text/javascript" src="./javascript/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+
 <!-- グラフのライブラリの読み込み -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
 
