@@ -14,4 +14,18 @@ $peereval_records_sql = "SELECT ${peereval_column} FROM {ispeereval_rubrics} WHE
 $peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id, $issetgoal->year, $issetgoal->subject));
 $peer_name = array('Aさん', 'Bさん', 'Cさん', 'Dさん', 'Eさん', 'Fさん');
 
+
+$p1_sql = 'SELECT id FROM {ispeereval} WHERE year = ? AND subject = ? AND times < ? ORDER BY times DESC';
+$p1s = $DB->get_records_sql($p1_sql, array($issetgoal->year, $issetgoal->subject, $issetgoal->times));
+
+foreach ($p1s as $p1) {
+    $p2_sql = "SELECT * FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = ?";
+
+    if (empty($p2)) {
+        $p2 = $DB->get_records_sql($p2_sql, array($USER->id, $p1));
+    } else {
+        break;
+    }
+}
+
 ?>
