@@ -8,26 +8,16 @@ $selfeval_records_sql = "SELECT ${selfeval_column} from {isselfeval_rubrics} as 
 $selfeval_records = $DB->get_records_sql($selfeval_records_sql, array($USER->id ,$issetgoal->year, $issetgoal->subject));
 
 // 他者評価結果の所得
-$peereval_time = 'SELECT id FROM {ispeereval} WHERE year = ? AND subject = ? ORDER BY times DESC LIMIT 1';
+$peereval_times_sql = 'SELECT id FROM {ispeereval} WHERE year = ? AND subject = ? AND times < ? ORDER BY times DESC';
+$peereval_times = $DB->get_records_sql($peereval_times_sql, array($issetgoal->year, $issetgoal->subject, $issetgoal->times));
 $peereval_column = 'id, user_id, ispeereval_id, peer_id, rubric_1 rubric_5, rubric_2 rubric_6, rubric_3 rubric_9, rubric_4, rubric_5 rubric_7, rubric_6 rubric_8, comment';
-$peereval_records_sql = "SELECT ${peereval_column} FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = (${peereval_time})";
-$peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id, $issetgoal->year, $issetgoal->subject));
-$peer_name = array('Aさん', 'Bさん', 'Cさん', 'Dさん', 'Eさん', 'Fさん');
-
-
-$p1_sql = 'SELECT id FROM {ispeereval} WHERE year = ? AND subject = ? AND times < ? ORDER BY times DESC';
-$p1s = $DB->get_records_sql($p1_sql, array($issetgoal->year, $issetgoal->subject, $issetgoal->times));
-
-foreach ($p1s as $p1) {
-    $p2_sql = "SELECT * FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = ?";
-
-    if (empty($p2)) {
-        $p2 = $DB->get_records_sql($p2_sql, array($USER->id, $p1->id));
+$peereval_records_sql = "SELECT ${peereval_column} FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = ?";
+foreach ($peereval_times as $peereval_time) {
+    if (empty($peereval_records)) {
+        $peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id, $peereval_time->id));
     } else {
         break;
     }
 }
-
-var_dump($p2);
-
+$peer_name = array('Aさん', 'Bさん', 'Cさん', 'Dさん', 'Eさん', 'Fさん');
 ?>
