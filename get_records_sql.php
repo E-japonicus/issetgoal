@@ -22,7 +22,7 @@ foreach ($p1s as $p1) {
     $p2_sql = "SELECT * FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = ?";
 
     if (empty($p2)) {
-        $p2 = $DB->get_records_sql($p2_sql, array($USER->id, $p1));
+        $p2 = $DB->get_records_sql($p2_sql, array($USER->id, $p1->id));
     } else {
         break;
     }
