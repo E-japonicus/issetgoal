@@ -28,4 +28,6 @@ foreach ($p1s as $p1) {
     }
 }
 
+var_dump($p2);
+
 ?>
