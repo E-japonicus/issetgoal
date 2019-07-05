@@ -29,7 +29,7 @@ defined('MOODLE_INTERNAL') || die();
 
 
 $plugin->component = 'mod_issetgoal';
-$plugin->version = 2019070511;
+$plugin->version = 2019070512;
 $plugin->release = 'v1.0';
 $plugin->requires = 2014051200;
 $plugin->maturity = MATURITY_ALPHA;
