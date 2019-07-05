@@ -14,4 +14,6 @@ $peereval_records_sql = "SELECT ${peereval_column} FROM {ispeereval_rubrics} WHE
 $peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id, $issetgoal->year, $issetgoal->subject));
 $peer_name = array('Aさん', 'Bさん', 'Cさん', 'Dさん', 'Eさん', 'Fさん');
 
+
+var_dump($DB->get_records_sql("SELECT * FROM {ispeereval}"));
 ?>
