@@ -5,8 +5,6 @@ $rubric_records = $DB->get_records_sql(
     inner join {user} on A.user_id = {user}.id
     order by A.user_id',
     array($issetgoal->id));
-
-var_dump($rubric_records);
 ?>
 <div>
     <span><?php echo count($rubric_records); ?>件</span>
