@@ -10,8 +10,8 @@ $selfeval_records = $DB->get_records_sql($selfeval_records_sql, array($USER->id 
 // 他者評価結果の所得
 $peereval_time = 'SELECT id FROM {ispeereval} WHERE year = ? AND subject = ? ORDER BY times DESC LIMIT 1';
 $peereval_column = 'id, user_id, ispeereval_id, peer_id, rubric_1 rubric_5, rubric_2 rubric_6, rubric_3 rubric_9, rubric_4, rubric_5 rubric_7, rubric_6 rubric_8, comment';
-$peereval_records_sql = "SELECT ${peereval_column} FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = (${peereval_time})";
-$peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id, $issetgoal->year, $issetgoal->subject));
+$peereval_records_sql = "SELECT * FROM {ispeereval_rubrics} WHERE peer_id = ?";
+$peereval_records = $DB->get_records_sql($peereval_records_sql, array($USER->id));
 $peer_name = array('Aさん', 'Bさん', 'Cさん', 'Dさん', 'Eさん', 'Fさん');
 
 var_dump($peereval_records); 
