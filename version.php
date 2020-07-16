@@ -29,8 +29,8 @@ defined('MOODLE_INTERNAL') || die();
 
 
 $plugin->component = 'mod_issetgoal';
-$plugin->version = 2019080201;
-$plugin->release = 'v2.0';
+$plugin->version = 2020071405;
+$plugin->release = 'v3.0';
 $plugin->requires = 2014051200;
 $plugin->maturity = MATURITY_ALPHA;
 $plugin->cron = 0;

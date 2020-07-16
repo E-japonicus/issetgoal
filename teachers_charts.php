@@ -11,7 +11,7 @@
 			<th style="text-align:center" width="15%">レベル２</th>
 			<th style="text-align:center" width="15%">レベル３</th>
 		</tr>
-		<?php for ($i=1; $i <= 11 ; $i++): ?>
+		<?php for ($i=1; $i <= 8 ; $i++): ?>
 			<tr>
 				<th><?php echo get_string("rubric[{$i}]", 'isselfeval')?></th>
 				<?php for ($j=0; $j < 4; $j++) : ?>

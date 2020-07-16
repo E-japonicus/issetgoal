@@ -63,8 +63,8 @@ include './get_records_sql.php';
             </tr>
         </thead>
         <tbody>
-            <?php for ($i=1; $i <= 11 ; $i++): ?>
-            <tr height="200">
+            <?php for ($i=1; $i <= 8 ; $i++): ?>
+            <tr height="150">
                 <th>
                     <?php echo get_string("rubric[{$i}]", 'issetgoal')?>
                 </th>
