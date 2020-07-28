@@ -10,7 +10,7 @@ $selfeval_records = $DB->get_records_sql($selfeval_records_sql, array($USER->id 
 // 他者評価結果の所得
 $peereval_times_sql = 'SELECT id FROM {ispeereval} WHERE year = ? AND subject = ? AND times < ? ORDER BY times DESC';
 $peereval_times = $DB->get_records_sql($peereval_times_sql, array($issetgoal->year, $issetgoal->subject, $issetgoal->times));
-$peereval_column = 'id, user_id, ispeereval_id, peer_id, rubric_1 rubric_5, rubric_2 rubric_6, rubric_3 rubric_9, rubric_4, rubric_5 rubric_7, rubric_6 rubric_8, comment';
+$peereval_column = 'id, user_id, ispeereval_id, peer_id, rubric_1 rubric_3, rubric_2 rubric_4, rubric_3 rubric_6, comment';
 $peereval_records_sql = "SELECT ${peereval_column} FROM {ispeereval_rubrics} WHERE peer_id = ? AND ispeereval_id = ?";
 foreach ($peereval_times as $peereval_time) {
     if (empty($peereval_records)) {
